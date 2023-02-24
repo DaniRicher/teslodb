@@ -74,7 +74,7 @@ export class ProductsService {
       }
 
     try {
-      
+
       return product;
       
     } catch (error) {
