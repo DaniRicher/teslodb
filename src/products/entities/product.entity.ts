@@ -53,9 +53,17 @@ export class Product {
         this.slug = this.slug
         .toLowerCase()
         .replace(/ /g, '_')
-        .replace(/'/g, '')
+        .replace(/'/g, '');
     }
 
-    // @BeforeUpdate
+    @BeforeUpdate()
+    checkSlugUpdate() {
+
+        this.slug = this.slug
+        .toLowerCase()
+        .replace(/ /g, '_')
+        .replace(/'/g, '');
+        
+    }
 
 }
