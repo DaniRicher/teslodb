@@ -1,8 +1,12 @@
+import { ApiProperty } from "@nestjs/swagger";
 import { IsString, MinLength, IsNumber, IsOptional, IsPositive, IsArray, IsInt, IsIn } from "class-validator";
 
 
 export class CreateProductDto {
 
+    @ApiProperty({
+        default: 10, description: 'How many rows do you need'
+    })
     @IsString()
     @MinLength(1)
     title: string;
